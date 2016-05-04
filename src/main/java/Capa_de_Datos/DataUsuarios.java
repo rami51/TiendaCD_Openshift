@@ -43,7 +43,7 @@ public class DataUsuarios {
 
 	public static Usuario getUsuario(String usuario){
 		Usuario u = null;
-		String sql = "select * from usuario where usuario like usu;";
+		String sql = "select * from usuario where usuario like ?;";
 		Connection con = FactoriaConexion.getInstancia().getConexion();
 		try {
 			PreparedStatement comando = con.prepareStatement(sql);
