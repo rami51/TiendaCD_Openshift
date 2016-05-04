@@ -393,7 +393,7 @@ public class DataDiscos {
 	//NO TIENE STORED PROCEDURE
 	public static void updateDisco (Disco disco){
 		Connection con = FactoriaConexion.getInstancia().getConexion();
-		String sql = "UPDATE `tiendacd`.`disco` SET `titulo`=?, `anioLanzamiento`=?, "
+		String sql = "UPDATE disco SET `titulo`=?, `anioLanzamiento`=?, "
 				+ "`cantCopiasDisp`=?, `precio`=?, `codGenero`=?, `codAutor`=?"
 				+ " WHERE `codDisco`=?;";
 		try {
@@ -587,7 +587,7 @@ public class DataDiscos {
 	private static float calcularValoracion(int codDisco){
 		float val = 0;
 		Connection con = FactoriaConexion.getInstancia().getConexion();
-		String sql = "call tiendacd.calcularValoraci�n(?);";
+		String sql = "call calcularValoracion(?);";
 		try {
 			PreparedStatement comando = con.prepareStatement(sql);
 			comando.setInt(1, codDisco);
@@ -681,7 +681,7 @@ public class DataDiscos {
 
 	public static void addDescuento(Descuento descuento) {
 		Connection con = FactoriaConexion.getInstancia().getConexion();
-		String sql = "insert into tiendacd.descuento (montoASuperar, porcentaje) values (?, ?);";
+		String sql = "insert into descuento (montoASuperar, porcentaje) values (?, ?);";
 		try {
 			PreparedStatement comando = con.prepareStatement(sql);							
 			comando.setFloat(1, descuento.getMontoASuperar());
@@ -696,7 +696,7 @@ public class DataDiscos {
 
 	public static void updateDescuento(Descuento descuento) {
 		Connection con = FactoriaConexion.getInstancia().getConexion();
-		String sql = "UPDATE `tiendacd`.`descuento` SET `montoASuperar`=?, `porcentaje`=?"
+		String sql = "UPDATE descuento SET `montoASuperar`=?, `porcentaje`=?"
 				+ "WHERE `codDescuento`=?;";
 		try {
 			PreparedStatement comando = con.prepareStatement(sql);

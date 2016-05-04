@@ -72,7 +72,7 @@ public class DataUsuarios {
 	//NO TIENE STORED PROCEDURE
 	public static void addUsuario(Usuario u){
 		Connection con = FactoriaConexion.getInstancia().getConexion();
-		String sql = "INSERT INTO `tiendacd`.`usuario` (`usuario`, `contrasenia`, `nombre`, `apellido`, `dni`, "
+		String sql = "INSERT INTO usuario (`usuario`, `contrasenia`, `nombre`, `apellido`, `dni`, "
 				+ "`codTipoUsuario`) VALUES (?, ?, ?, ?, ?, '1');";
 		try {
 			PreparedStatement comando = con.prepareStatement(sql);
@@ -91,7 +91,7 @@ public class DataUsuarios {
 
 	public static void removeUsuario(String usuario){
 		Connection con = FactoriaConexion.getInstancia().getConexion();
-		String sql = "call tiendacd.removeUsuario(?);";
+		String sql = "call removeUsuario(?);";
 		try {
 			PreparedStatement comando = con.prepareStatement(sql);
 			comando.setString(1, usuario);
