@@ -7,9 +7,9 @@ public class FactoriaConexion {
 	private int cantCon;
 	private Connection conexion;
 	private static String host="127.10.76.2";
-	//private String port="3306";
+	private String port="3306";
 	private static String user="adminA6seW4k";
-	private static String pass="TKkUT6EtChVD";
+	private static String pass="*04D602D200355F940C6C3D39ACFCAE9521DA2C47";
 	private static String db="tiendacdopenshift";
 	private static FactoriaConexion instancia;
 	
@@ -35,7 +35,7 @@ public class FactoriaConexion {
 	public Connection getConexion(){
 		try {
 			if(conexion==null || conexion.isClosed()){
-				conexion = DriverManager.getConnection("jdbc:mysql://"+host+"/"+db, user, pass);
+				conexion = DriverManager.getConnection("jdbc:mysql://"+host+":"+port+"/"+db, user, pass);
 				cantCon++;
 			}
 		} catch (SQLException e) {
