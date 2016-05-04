@@ -570,7 +570,7 @@ public class DataDiscos {
 			
 			//Ahora voy a agregar los discos de la venta a la BD
 			for (Disco d : discos) {
-				String sql2 = "INSERT INTO `tiendacd`.`discos_por_venta` (`codDisco`, `nroVenta`) VALUES (?, ?);"; //codDisco nroVenta	
+				String sql2 = "INSERT INTO discos_por_venta (`codDisco`, `nroVenta`) VALUES (?, ?);"; //codDisco nroVenta	
 				PreparedStatement comando2 = con.prepareStatement(sql2);
 				comando2.setInt(1, d.getCodDisco());
 				comando2.setInt(2, nroVenta);
