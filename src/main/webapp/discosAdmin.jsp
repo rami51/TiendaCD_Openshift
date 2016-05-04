@@ -98,7 +98,7 @@
 		</tr>
 		<tr>
 			<td><b>Año Lanzamiento: </b></td>
-			<td><input type="text" class="form-control" id="añoDisco" name="añoDisco" value="<%if(request.getAttribute("anoDisco")!=null){%><%=request.getAttribute("anoDisco") %><% }%>"></td>
+			<td><input type="text" class="form-control" id="anoDisco" name="anoDisco" value="<%if(request.getAttribute("anoDisco")!=null){%><%=request.getAttribute("anoDisco") %><% }%>"></td>
 		</tr>
 		<tr>
 			<td><b>Precio:</b></td>
