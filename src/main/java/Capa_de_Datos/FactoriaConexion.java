@@ -9,7 +9,7 @@ public class FactoriaConexion {
 	private static String host="127.10.76.2";
 	private String port="3306";
 	private static String user="adminA6seW4k";
-	private static String pass="*04D602D200355F940C6C3D39ACFCAE9521DA2C47";
+	private static String pass="TKkUT6EtChVD";
 	private static String db="tiendacdopenshift";
 	private static FactoriaConexion instancia;
 	
