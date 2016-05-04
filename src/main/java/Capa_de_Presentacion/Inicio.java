@@ -52,7 +52,7 @@ public class Inicio extends HttpServlet {
 						request.getRequestDispatcher("discos.jsp").forward(request, response);
 				}
 				else{
-					request.setAttribute("msjError", "La contrase�a es incorrecta");
+					request.setAttribute("msjError", "La contraseña es incorrecta");
 					request.getRequestDispatcher("inicio.jsp").forward(request, response);
 				}
 			}
